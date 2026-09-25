@@ -2,14 +2,10 @@
 class IntentsMcp < Formula
   desc "Expose your Mac's App Intents to AI agents as MCP tools, through Shortcuts"
   homepage "https://github.com/VladUZH/intents-mcp"
-  url "https://github.com/VladUZH/intents-mcp/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "b2a30322b55d11b01113486052625175375d9de4c30f27b95949e3e6c4fedab1"
+  url "https://github.com/VladUZH/intents-mcp/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "7d55a85437d2cb3de637b422f025b9e8e2bb43664335711dd00f15d730f7ca33"
   license "MIT"
 
-  bottle do
-    root_url "https://github.com/VladUZH/homebrew-tap/releases/download/intents-mcp-0.1.0"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "23dfbfd70e652607b71a3629edf0de6db4eb81ec509b2f8bfccfe0d5898e5ff9"
-  end
 
   depends_on xcode: ["26.0", :build]
   depends_on macos: :tahoe
