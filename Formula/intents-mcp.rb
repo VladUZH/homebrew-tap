@@ -6,7 +6,6 @@ class IntentsMcp < Formula
   sha256 "7d55a85437d2cb3de637b422f025b9e8e2bb43664335711dd00f15d730f7ca33"
   license "MIT"
 
-
   depends_on xcode: ["26.0", :build]
   depends_on macos: :tahoe
   uses_from_macos "swift" => :build
