@@ -6,6 +6,11 @@ class IntentsMcp < Formula
   sha256 "1bd139ca2fd27c70adb672d217d8f2137a786ce402b2325f4081bf1304a9df25"
   license "MIT"
 
+  bottle do
+    root_url "https://github.com/VladUZH/homebrew-tap/releases/download/intents-mcp-0.1.4"
+    sha256 cellar: :any_skip_relocation, arm64_tahoe: "0d65adb7c885fe4bb2f815cb5c556fc23b03370edfa11dc17861e75201f13e4a"
+  end
+
   depends_on xcode: ["26.0", :build]
   depends_on macos: :tahoe
   uses_from_macos "swift" => :build
