@@ -2,14 +2,9 @@
 class IntentsMcp < Formula
   desc "Expose your Mac's App Intents to AI agents as MCP tools, through Shortcuts"
   homepage "https://github.com/VladUZH/intents-mcp"
-  url "https://github.com/VladUZH/intents-mcp/archive/refs/tags/v0.1.2.tar.gz"
-  sha256 "d16d05afb08f14ef471de87da1067150b1f599ad4040ee621f354d2e9a509542"
+  url "https://github.com/VladUZH/intents-mcp/archive/refs/tags/v0.1.3.tar.gz"
+  sha256 "99a7596d974bc5f3dac83766f398c6ce1e21f7a510c2b6a051d597032c423588"
   license "MIT"
-
-  bottle do
-    root_url "https://github.com/VladUZH/homebrew-tap/releases/download/intents-mcp-0.1.2"
-    sha256 cellar: :any_skip_relocation, arm64_tahoe: "8ca8249b25375a7e1edb1ea92ffff1d150eb91be01fb33940962d20b6dd66686"
-  end
 
   depends_on xcode: ["26.0", :build]
   depends_on macos: :tahoe
@@ -24,9 +19,10 @@ class IntentsMcp < Formula
     <<~EOS
       Enable tools, then add the server to your agent:
         intents-mcp enable reminders.add calendar.create-event
-        claude mcp add mac -- #{opt_bin}/intents-mcp serve
+        claude mcp add --scope user mac -- #{opt_bin}/intents-mcp serve
         codex mcp add mac -- #{opt_bin}/intents-mcp serve
-      Each tool needs one "Add Shortcut" click; Shortcuts may also ask to "Always Allow" on first run.
+      Click "Add Shortcut" for each tool, and once more for its read-back helper (Reminders,
+      Calendar). Shortcuts may also ask to "Always Allow" on a tool's first run.
       Signing a shortcut uses your iCloud account; Apple receives a copy for validation.
     EOS
   end
